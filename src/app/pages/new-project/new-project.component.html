@@ -1,0 +1,47 @@
+
+<h1 style="color: red">Projects </h1>
+<p>Project Details</p>
+<div class=""container>
+<form [formGroup]="newProjectForm" (ngSubmit)="saveProject()">
+
+    <div class="form-group">
+        <label>Project Name</label>
+        <input class="form-control" type="text" id="projectName" formControlName="projectName" placeholder="projectName" /><br />
+    </div>
+    <div class="form-group">
+        <label>start Date</label>
+        <input class="form-control" type="text" id="startDate" formControlName="startDate" placeholder="startDate" /><br />
+    </div>
+
+        <div class="form-group">
+        <label>end Date</label>
+        <input class="form-control" type="text" id="endDate" formControlName="endDate" placeholder="endDate" /><br />
+        </div>
+
+        <div class="form-group">
+        <label>project Manager</label>
+        <input class="form-control" type="text" id="projectManager" formControlName="projectManager" placeholder="projectManager" /><br />
+        </div>
+
+        <div class="form-group">
+        <label>project Budget</label>
+        <input class="form-control" type="text" id="projectBudget" formControlName="projectBudget" placeholder="projectBudget" /><br />
+    </div>
+       
+        <label >Project Status</label><br/>
+        starting <input type="radio" id="projectStatus" value="starting " formControlName="projectStatus" placeholder="project Status" />
+        In Progress<input type="radio" id="projectStatus" value="In progress" formControlName="projectStatus" placeholder="project Status" />
+        completed <input type="radio" id="projectStatus" value="completed" formControlName="projectStatus" placeholder="project Status" /><br/><br/>
+
+       <label>Project Type :</label>
+        <select id="projectType" formControlName="projectType">
+            <option value="">Select type</option>
+            <option value="New">New</option>
+            <option value="Extend">Extend</option>
+            <option value="Reopen">Reopen</option>
+           
+        </select><br /><br />
+        
+        <button type="submit">Save</button>
+    </form>
+</div>

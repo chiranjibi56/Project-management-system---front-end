@@ -1,0 +1,38 @@
+<h1> Project board </h1>
+<button routerLink="/new">Create new Project</button>
+
+<h3>Project List</h3>
+<p>***All project handeling by PMS! *** </p>
+<table style="border: 2px solid black; width: 100%;">
+    <thead>
+        <tr>
+            <th>ProjectId</th>
+            <th>Project Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Project Status</th>
+            <th>Project type</th>
+            <th>Project Manager</th>
+            <th>Project Budget</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let project of projectList">
+            <td>{{project.projectId}} </td>
+            <td>{{project.projectName}} </td>
+            <td>{{project.startDate}} </td>
+            <td>{{project.endDate}} </td>
+            <td>{{project.projectStatus}} </td>
+            <td>{{project.projectType}} </td>
+            <td>{{project.projectManager}} </td>
+            <td>{{project.projectBudget}} </td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteProject(project.projectId)">Delete</button>
+                <button class="btn btn btn-success" style="margin-left: 20px;" routerLink="/update/{{project.projectId}}">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

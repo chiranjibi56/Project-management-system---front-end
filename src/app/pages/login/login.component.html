@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 style="color: red;">Project Management System</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+
+        <p style="color:green">Enter your user name and password</p>
+        <div class="form-group">
+        <label>Username</label>
+        <input class="form-control" type="text" id="userName" formControlName="userName" placeholder="UserName" /><br/><br />
+        </div>
+        <label>Password</label>
+        <input class="form-control" type="text" id="password" formControlName="password" placeholder="Password" /><br /><br />
+
+        <button class="btn btn-primary"type="submit">Login</button><br/><br/>
+        <p style="color: red;">If you don't have register, sign up here</p>
+        <button class="btn btn-success" routerLink="signup">Sign up </button>
+
+    </form>
+</div>
