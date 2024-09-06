@@ -24,7 +24,8 @@ export class ProjectListComponent implements OnInit {
 
   getAllProjects():void{
      this.projectService.getProjectList().subscribe((projectList:Project[]) =>{
-    console.log(projectList)
+    // console.log(projectList)
+    console.log('getting list from DB')
     this.projectList= projectList
      })
 
