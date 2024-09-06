@@ -33,7 +33,7 @@ constructor (private formBuilder:FormBuilder,
         this.router.navigate(['list']);
         // alert('login success');
       }else{
-        alert('Invalid username or password');
+        alert('Invalid username or password, please enter valid user name and password');
       }
     })
     // alert('you clicked login button')
