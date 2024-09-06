@@ -7,12 +7,16 @@
         <div class="form-group">
         <label>Username</label>
         <input class="form-control" type="text" id="userName" formControlName="userName" placeholder="UserName" /><br/><br />
+        <div class="text-danger">
+            Please provide user name.
         </div>
+        </div>
+
         <label>Password</label>
         <input class="form-control" type="text" id="password" formControlName="password" placeholder="Password" /><br /><br />
 
-        <button class="btn btn-primary"type="submit">Login</button><br/><br/>
-        <p style="color: red;">If you don't have register, sign up here</p>
+        <button [disabled]="loginForm.invalid" class="btn btn-primary"type="submit">Login</button><br/><br/>
+        <p style="color: red;">If you don't have register, sign up here!!!</p>
         <button class="btn btn-success" routerLink="signup">Sign up </button>
 
     </form>

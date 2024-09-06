@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 import { Router, RouterLink } from '@angular/router';
@@ -20,8 +20,8 @@ constructor (private formBuilder:FormBuilder,
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      userName:[''],
-      password:['']
+      userName:['', Validators.required],
+      password:['', Validators.required]
     })
   }
 
