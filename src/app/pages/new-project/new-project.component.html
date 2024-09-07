@@ -1,31 +1,49 @@
+<div class="container">
+    <h1 style="color: red" class="text-center">Projects </h1>
+    <p>Please provide the project Details!!!</p>
 
-<h1 style="color: red">Projects </h1>
-<p>Project Details</p>
-<div class=""container>
-<form [formGroup]="newProjectForm" (ngSubmit)="saveProject()">
-
+    <form [formGroup]="newProjectForm" (ngSubmit)="saveProject()">
     <div class="form-group">
         <label>Project Name</label>
-        <input class="form-control" type="text" id="projectName" formControlName="projectName" placeholder="projectName" /><br />
+        <input class="form-control" type="text" id="projectName" formControlName="projectName" placeholder="projectName" />
+        <div class="text-danger" *ngIf="newProjectForm.get('projectName').errors?.['required'] && newProjectForm.get('projectName')?.touched ">
+             Please provide new project name!!
+    </div><br />
     </div>
     <div class="form-group">
         <label>start Date</label>
-        <input class="form-control" type="text" id="startDate" formControlName="startDate" placeholder="startDate" /><br />
+        <input class="form-control" type="text" id="startDate" formControlName="startDate" placeholder="startDate" />
+        <div class="text-danger"
+            *ngIf="newProjectForm.get('startDate').errors?.['required'] && newProjectForm.get('startDate')?.touched ">
+            Please provide the start date!!
+        </div><br />
     </div>
 
         <div class="form-group">
         <label>end Date</label>
-        <input class="form-control" type="text" id="endDate" formControlName="endDate" placeholder="endDate" /><br />
+        <input class="form-control" type="text" id="endDate" formControlName="endDate" placeholder="endDate" />
+        <div class="text-danger"
+            *ngIf="newProjectForm.get('endDate').errors?.['required'] && newProjectForm.get('endDate')?.touched ">
+            Please provid the end date!!
+        </div><br />
         </div>
 
         <div class="form-group">
         <label>project Manager</label>
-        <input class="form-control" type="text" id="projectManager" formControlName="projectManager" placeholder="projectManager" /><br />
+        <input class="form-control" type="text" id="projectManager" formControlName="projectManager" placeholder="projectManager" />
+        <div class="text-danger"
+            *ngIf="newProjectForm.get('projectManager').errors?.['required'] && newProjectForm.get('projectManager')?.touched ">
+            Please prodive project manager name !!
+        </div><br />
         </div>
 
-        <div class="form-group">
+        <div class="form-group" >
         <label>project Budget</label>
-        <input class="form-control" type="text" id="projectBudget" formControlName="projectBudget" placeholder="projectBudget" /><br />
+        <input class="form-control" type="text" id="projectBudget" formControlName="projectBudget" placeholder="projectBudget" />
+        <div class="text-danger"
+             *ngIf="newProjectForm.get('projectBudget').errors?.['required'] && newProjectForm.get('projectBudget')?.touched">
+            Please provide the project budget!!
+        </div><br/>
     </div>
        
         <label >Project Status</label><br/>
@@ -45,3 +63,4 @@
         <button type="submit">Save</button>
     </form>
 </div>
+
