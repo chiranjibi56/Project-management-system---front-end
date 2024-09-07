@@ -13,7 +13,10 @@
 
         <div class="form-group">
         <label>Password</label>
-        <input class="form-control" type="text" id="password" formControlName="password" placeholder="Password" /><br /><br />
+        <input class="form-control" type="text" id="password" formControlName="password" placeholder="Password" />
+        <div class="text-danger" *ngIf="loginForm.get('password').errors?.['required'] && loginForm.get('password')?.touched">
+            Please provide password!!
+        </div><br /><br />
         </div>
 
         <button [disabled]="loginForm.invalid" class="btn btn-primary"type="submit">Login</button><br/><br/>
