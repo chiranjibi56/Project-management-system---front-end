@@ -3,11 +3,12 @@ import { RouterLink } from '@angular/router';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project';
 import { CommonModule } from '@angular/common';
+import {Table, TableModule} from 'primeng/table'
 
 @Component({
   selector: 'app-project-list',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, TableModule],
   templateUrl: './project-list.component.html',
   styleUrl: './project-list.component.scss'
 })

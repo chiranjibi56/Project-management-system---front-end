@@ -1,7 +1,9 @@
 <div class="container">
+    <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+
     <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
 
-        <h3 style="color:green">Register your information here</h3>
+        <h3 style="color:green" class="text-center">Register your information here</h3>
 
         <div class="form-group">
         <label>First name</label>
@@ -36,10 +38,14 @@
         <input class="form-control" type="password" id="password" formControlName="password" placeholder="Password" /><br />
         
         </div>
-        <button type="submit">Sign Up</button>
-     
-    
+        <button type="submit" class="btn btn-primary">Sign Up</button>
 
     </form>
+    <footer>
+        <p>The Project Management System application is designed to efficiently manage projects from initiation to
+            completion. It
+            provides the management tools with tools to handle projects in an effective and transparent manner. </p>
+    </footer>
+    </div>
 </div>
 <!-- <p-toast ><p-toast /> -->

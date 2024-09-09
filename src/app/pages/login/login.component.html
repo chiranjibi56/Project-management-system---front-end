@@ -1,9 +1,13 @@
-<div class="container">
-    <h2 style="color: red;">Project Management System</h2>
+<div class="container" >
+
+<div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+
+
+    <h2 style="color: red;" class="text-center">Project Management System</h2>
     <form [formGroup]="loginForm" (ngSubmit)="login()">
 
         <div class="form-group">
-        <p style="color:green">Enter your user name and password</p>
+        <h3 style="color:green">Enter your user name and password</h3>
         <label>Username</label>
         <input class="form-control" type="text" id="userName" formControlName="userName" placeholder="UserName" />
         <div class="text-danger" *ngIf="loginForm.get('userName').errors?.['required'] && loginForm.get('userName')?.touched ">
@@ -24,4 +28,9 @@
         <button class="btn btn-success" routerLink="signup">Sign up </button>
 
     </form>
+    <footer>
+        <p>The Project Management System application is designed to efficiently manage projects from initiation to completion. It
+        provides the management tools with tools to handle projects in an effective and transparent manner. </p>
+    </footer>
+    </div>
 </div>

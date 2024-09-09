@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule, ReactiveFormsModule, RouterLink, CommonModule],
   templateUrl: './new-project.component.html',
   styleUrl: './new-project.component.scss',
+  
 })
 export class NewProjectComponent implements OnInit {
   newProjectForm: FormGroup;
@@ -20,7 +21,7 @@ export class NewProjectComponent implements OnInit {
     private formBuilder: FormBuilder,
     private projectService: ProjectService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -59,11 +60,11 @@ export class NewProjectComponent implements OnInit {
     } else {
       this.projectService
         .saveProject(projectDeta)
-        .subscribe((result: string) => {
-          alert(result);
+        .subscribe((result:string)=>{
+          alert(result)
+          this.router.navigate(['list']);
         });
-      //console.log(this.newProjectForm.value);
+        //console.log(this.newProject.value);
+      }
     }
   }
-}
- 
