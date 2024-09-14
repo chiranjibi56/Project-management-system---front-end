@@ -51,6 +51,7 @@ export class SignupComponent implements OnInit {
         //alert('this is userService')
       } else {
         alert('Unable to register user!');
+        console.log('This is different ')
       }
     });
   }
