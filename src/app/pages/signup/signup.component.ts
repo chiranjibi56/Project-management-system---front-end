@@ -48,6 +48,7 @@ export class SignupComponent implements OnInit {
       if (result === 'success') {
         // this.messageService.add({severity: 'success', summary: 'success', detail: 'User created successfully!' })
         this.router.navigate(['']); // Redirecting to login page after user register
+        //alert('this is userService')
       } else {
         alert('Unable to register user!');
       }

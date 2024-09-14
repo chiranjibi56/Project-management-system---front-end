@@ -65,6 +65,7 @@ export class NewProjectComponent implements OnInit {
           this.router.navigate(['list']);
         });
         //console.log(this.newProject.value);
+        
       }
     }
   }
